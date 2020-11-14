@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Counter</title>
+
+    <style>
+        div {
+            margin: auto;
+            width: 300pt;
+            height: 50pt;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="title">
+        <h1>Simple Counter App</h1>
+    </div>
+    <div id="counter">0</div>
+    <div id="button">
+        <input type="button" value="+">
+        <input type="button" value="-">
+    </div>
+
+    <script type="text/javascript">
+        document.querySelectorAll("input").forEach((e) => {
+            e.addEventListener("click", (event) => {
+                if (e.value == "+") {
+                    document.getElementById("counter").innerHTML = parseInt(document.getElementById("counter").innerHTML) + 1
+                } else {
+                    document.getElementById("counter").innerHTML = parseInt(document.getElementById("counter").innerHTML) - 1
+                }
+            })
+        })
+    </script>
+</body>
+</html>
